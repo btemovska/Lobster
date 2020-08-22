@@ -1,7 +1,10 @@
 package com.example.lobster.model;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Lobster {
@@ -13,6 +16,8 @@ public class Lobster {
     private String description;
     @ManyToOne
     private Specie specie;
+    @ManyToMany
+    private Set<HashTag> hashTags;
 
     public Lobster() {}
 
@@ -20,6 +25,7 @@ public class Lobster {
         this.name = name;
         this.description = description;
         this.specie = specie;
+        this.hashTags = new HashSet<>();
     }
 
     public Long getId(){
@@ -30,6 +36,7 @@ public class Lobster {
         return description; }
     public Specie getSpecie() {
         return specie; }
+    public Collection<HashTag> getHashTags(){ return hashTags;}
 
     @Override
     public boolean equals(Object o) {
@@ -40,6 +47,8 @@ public class Lobster {
     }
 
     @Override
-    public int hashCode() { return Objects.hash(id, name, description, specie); }
+    public int hashCode() { return Objects.hash(id); }
+    public void addHashTag(HashTag hashTagToAdd) { hashTags.add(hashTagToAdd);}
+    public void deleteHashTag(HashTag hashTagToRemove) { hashTags.remove(hashTagToRemove);}
 
 }

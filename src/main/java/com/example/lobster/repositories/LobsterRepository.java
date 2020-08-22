@@ -1,4 +1,7 @@
 package com.example.lobster.repositories;
 
-public interface LobsterRepository {
+import com.example.lobster.model.Lobster;
+import org.springframework.data.repository.CrudRepository;
+
+public interface LobsterRepository extends CrudRepository<Lobster, Long> {
 }
