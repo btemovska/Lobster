@@ -24,13 +24,13 @@ public class Populator implements CommandLineRunner {
         specieRepo.save(clawed);
         specieRepo.save(spiny);
 
-        Lobster reefLobster = new Lobster("Reef Lobster", "description goes here", clawed);
-        Lobster squadLobster = new Lobster("Squat Lobster", "description goes here", clawed);
-        Lobster americanLobster = new Lobster("American Lobster", "description goes here", clawed);
-        Lobster europeanLobster = new Lobster("European Lobster", "description goes here", clawed);
-        Lobster rockLobster = new Lobster("Rock Lobster", "description goes here", spiny);
-        Lobster slipperLobster = new Lobster("Slipper Lobster", "description goes here", spiny);
-        Lobster furryLobster = new Lobster("Furry Lobster", "description goes here", spiny);
+        Lobster reefLobster = new Lobster("Reef Lobster", "description for Reef Lobster goes here", clawed);
+        Lobster squadLobster = new Lobster("Squat Lobster", "description for Squad Lobster goes here", clawed);
+        Lobster americanLobster = new Lobster("American Lobster", "description for American Lobster goes here", clawed);
+        Lobster europeanLobster = new Lobster("European Lobster", "description for European Lobster goes here", clawed);
+        Lobster rockLobster = new Lobster("Rock Lobster", "description for Rock Lobster goes here", spiny);
+        Lobster slipperLobster = new Lobster("Slipper Lobster", "description for Slipper Lobster goes here", spiny);
+        Lobster furryLobster = new Lobster("Furry Lobster", "description for Furry Lobster goes here", spiny);
         lobsterRepo.save(reefLobster);
         lobsterRepo.save(squadLobster);
         lobsterRepo.save(americanLobster);
