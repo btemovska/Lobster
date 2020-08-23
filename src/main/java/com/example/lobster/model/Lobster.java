@@ -1,5 +1,7 @@
 package com.example.lobster.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
@@ -17,6 +19,7 @@ public class Lobster {
     @ManyToOne
     private Specie specie;
     @ManyToMany
+    @JsonIgnore
     private Set<HashTag> hashTags;
 
     public Lobster() {}

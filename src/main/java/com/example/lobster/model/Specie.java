@@ -1,5 +1,7 @@
 package com.example.lobster.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +17,7 @@ public class Specie {
     private Long id;
     private String type;
     @OneToMany(mappedBy = "specie")
+    @JsonIgnore
     private Collection<Lobster> lobsters;
 
     public Specie() {}
