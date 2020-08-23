@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#app{
+    margin: 2em auto;
+    max-width: 90%;
+    min-height: 75vh;
+    width: 1000px;
+    text-align: center;
+    background-color: #999;
+}
+
+.header{
+    margin: 2em auto;
+    max-width: 90%;
+    width: 1000px;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-list li:after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #06bb34;
+    transition: width.3s;
+}
+
+.nav-list li:hover:after{
+    width: 100%;
+    transition: width .6s;
+}
+
+.frontPageImage, .page-image{
+    height: 70%;
+    width: 90%;
+}
+
+.footer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.hashTags-list{
+    margin: 1rem;
+}
+
+.lobsters-list__name, .hashTags-list__name{
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.lobsters-list__name:hover{
+    background-color: rgb(231, 227, 227);
+    margin-left: 270px;
+    margin-right: 270px;
+}
