@@ -22,5 +22,6 @@ BT notes:
 
 - in VSCode cd into client folder
 - from terminal to run the server type: 
+    - npm install parcel-bundler
     - npm start
     - should start server at http://localhost:1234 
