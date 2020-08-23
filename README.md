@@ -20,4 +20,7 @@ BT notes:
     - JDBC URL: jdbc:h2:mem:testdb
     - connect
 
-
+- in VSCode cd into client folder
+- from terminal to run the server type: 
+    - npm start
+    - should start server at http://localhost:1234 

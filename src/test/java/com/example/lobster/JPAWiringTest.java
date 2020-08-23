@@ -31,8 +31,8 @@ public class JPAWiringTest {
     public void specieShouldHaveAListOfLobsters(){
         Specie testSpecie1 = new Specie("Test Type1");
         Specie testSpecie2 = new Specie("Test Type2");
-        Lobster testLobster1 = new Lobster("Name", "Description", testSpecie1);
-        Lobster testLobster2 = new Lobster("Name", "Description", testSpecie1);
+        Lobster testLobster1 = new Lobster("Name", "Description","", testSpecie1);
+        Lobster testLobster2 = new Lobster("Name", "Description", "", testSpecie1);
         specieRepo.save(testSpecie1);
         specieRepo.save(testSpecie2);
         lobsterRepo.save(testLobster1);
@@ -48,7 +48,7 @@ public class JPAWiringTest {
     @Test
     public void lobstersShouldHaveHashTags(){
         Specie testSpecie = new Specie("Test Type");
-        Lobster testLobster1 = new Lobster("Name", "Description", testSpecie);
+        Lobster testLobster1 = new Lobster("Name", "Description", "", testSpecie);
         HashTag hashTag1 = new HashTag("HashTag1");
         HashTag hashTag2 = new HashTag("HashTag2");
         specieRepo.save(testSpecie);

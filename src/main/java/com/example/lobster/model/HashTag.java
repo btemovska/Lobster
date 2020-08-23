@@ -1,5 +1,7 @@
 package com.example.lobster.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +15,7 @@ public class HashTag {
     private Long id;
     private String name;
     @ManyToMany(mappedBy = "hashTags")
+    @JsonIgnore
     private Collection<Lobster> lobsters;
 
     public HashTag() {}
