@@ -39,7 +39,8 @@ public class Specie {
     }
 
     @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
+//    public int hashCode() {
+//        return super.hashCode();
+//    }
+    public int hashCode() {return Objects.hash(id);}
 }
